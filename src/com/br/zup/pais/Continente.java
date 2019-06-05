@@ -73,7 +73,7 @@ public class Continente implements interfacesContinente {
 
 			}
 
-			System.out.println("deseja incluir mais um pais?" + "Digite '1' para sim ou '0' para não");
+			System.out.println("deseja incluir mais um pais?\n" + "Digite '1' para sim ou '0' para não");
 			controle = scanWh.nextInt();
 
 		}
@@ -163,5 +163,16 @@ public class Continente implements interfacesContinente {
 		}
 		return menorDimensao;
 	}
+
+	@Override
+	public String toString() {
+		String modelo = "";
+		modelo += "\nNome do continente -> "+ this.getNome();
+		modelo += "\n\nPaises que compõem este continente\n" + this.getListaPaises();
+		
+		
+		return modelo;
+	}
+	
 
 }
