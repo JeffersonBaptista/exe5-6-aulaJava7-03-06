@@ -12,6 +12,12 @@ public class AppContinente {
 		
 		System.out.println("A dimensão total do continente -> " + continente.dimensaoTotal());
 		System.out.println("A população total do continente -> " + continente.pupulacaoTotal());
+		
+		System.out.println("\nMaior população\n"+ continente.maiorPopulacao());
+		System.out.println("\nMenor população\n"+ continente.menorPopulacao());
+		System.out.println("\nMaior dimensão\n"+ continente.maiorDimensao());
+		System.out.println("\nMenor dimensão\n"+ continente.menorDimensao());
+		System.out.println("\nDencidade total\n"+ continente.densidadeTotal());
 
 	}
 

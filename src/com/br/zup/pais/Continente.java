@@ -108,32 +108,60 @@ public class Continente implements interfacesContinente {
 
 	@Override
 	public double densidadeTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+		double total = 0;
+		for (Pais pais : ListaPaises) {
+			total += pais.getPopulacao() / pais.getDimensao();
+		}
+
+		return total;
 	}
 
 	@Override
 	public Pais maiorPopulacao() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Pais> lista = this.getListaPaises();
+		Pais maiorPopulacao = lista.get(0);
+		for (Pais pais : lista) {
+			if (maiorPopulacao.getPopulacao() < pais.getPopulacao()) {
+				maiorPopulacao = pais;
+			}
+		}
+		return maiorPopulacao;
 	}
 
 	@Override
 	public Pais menorPopulacao() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Pais> lista = this.getListaPaises();
+		Pais menorPopulacao = lista.get(0);
+		for (Pais pais : lista) {
+			if (menorPopulacao.getPopulacao() > pais.getPopulacao()) {
+				menorPopulacao = pais;
+			}
+		}
+		return menorPopulacao;
 	}
 
 	@Override
 	public Pais maiorDimensao() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Pais> lista = this.getListaPaises();
+		Pais maiorDimensao = lista.get(0);
+		for (Pais pais : lista) {
+			if (maiorDimensao.getDimensao() < pais.getDimensao()) {
+				maiorDimensao = pais;
+			}
+		}
+		return maiorDimensao;
 	}
 
 	@Override
 	public Pais menorDimensao() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Pais> lista = this.getListaPaises();
+		Pais menorDimensao = lista.get(0);
+		for (Pais pais : lista) {
+			if (menorDimensao.getDimensao() > pais.getDimensao()) {
+				menorDimensao = pais;
+			}
+		}
+		return menorDimensao;
 	}
 
 }
